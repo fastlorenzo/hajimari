@@ -19,7 +19,7 @@ RUN \
     && \
     go mod download \
     && \
-    go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o hajimari /build/main.go \
+    go build -a -tags netgo -ldflags '-w -extldflags "-static"' -o hajimari /build/cmd/hajimari/main.go \
     && \
     chmod +x hajimari
 
@@ -27,8 +27,8 @@ FROM alpine:3.16
 
 RUN \
     apk add --no-cache \
-        tzdata \
-        tini \
+    tzdata \
+    tini \
     && \
     addgroup -S hajimari \
     && \
