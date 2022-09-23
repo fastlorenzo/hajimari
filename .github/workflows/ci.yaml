@@ -9,7 +9,7 @@ on:
       - "charts/hajimari/**"
 
 env:
-  REGISTRY_IMAGE: ghcr.io/toboshii/hajimari
+  REGISTRY_IMAGE: ghcr.io/fastlorenzo/hajimari
 
 jobs:
   build:
